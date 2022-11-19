@@ -1,0 +1,259 @@
+:root {
+  --bright-gray-color: #e1eeec;
+  --slate-gray-color: #6a8695;
+  --white-color: #ffffff;
+  --palatinate-blue-color: #3d3dd7;
+  --alice-blue-color: #f0f8ff;
+  --blue-color: #0014ff;
+  --vampire-black: #080808;
+  --hover-blue-color: #1b3987;
+  --extra-large-font: 30px;
+  --large-font: 22px;
+  --medium-font: 15px;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background: var(--bright-gray-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+}
+
+.App .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  background: var(--slate-gray-color);
+}
+
+.App .navbar .navtabcontainer {
+  padding: 20px;
+}
+
+.App .navbar .navtabcontainer a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: var(--large-font);
+  font-weight: bold;
+}
+
+.App .navbar .navtabcontainer i {
+  padding: 10px;
+  font-size: var(--large-font);
+  color: white;
+}
+
+.App .navbar .active-tab {
+  background-color: var(--alice-blue-color);
+}
+
+.App .navbar .active-tab i {
+  color: var(--palatinate-blue-color);
+}
+
+.App .navbar .active-tab a {
+  color: var(--palatinate-blue-color);
+}
+
+.App .page-content {
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.App .page-content .form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App .page-content .form-container form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 400px;
+  padding: 20px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+}
+
+.App .page-content .form-container label {
+  margin: 10px 0px 0px 0px;
+  font-size: var(--medium-font);
+}
+
+.App .page-content .form-container input,
+.App .page-content .form-container textarea {
+  margin: 10px 0px;
+  width: 95%;
+}
+
+.App .page-content .form-container textarea {
+  height: 70px;
+}
+
+.App .page-content .form-container input {
+  height: 30px;
+}
+
+.App .page-content .form-container .btnsubmit {
+  margin: 10px 0px;
+  width: 40%;
+  height: 35px;
+  background-color: var(--palatinate-blue-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+}
+
+.App .page-content .form-container .btnsubmit:hover {
+  background-color: var(--hover-blue-color);
+}
+
+.App .page-content .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App .page-content .card-container .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  padding: 20px;
+}
+
+.App .page-content .card-container .cards .card {
+  padding: 25px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.App .page-content .card-container .cards .card i {
+  font-size: var(--extra-large-font);
+}
+
+.App .page-content .card-container .cards .card p {
+  padding: 5px;
+  margin: 5px;
+}
+
+.App .page-content .link-container {
+  height: 50%;
+  background-image: url(../src/img/url-back.jpg);
+  background-repeat: round;
+  opacity: 0.5;
+}
+
+.App .page-content .link-container .linkform-container {
+  padding: 50px;
+}
+
+.App .page-content .link-container .linkform-container form {
+  margin: 20px;
+}
+
+.App .page-content .link-container .linkform-container form input {
+  height: 40px;
+  margin: 10px;
+  text-indent: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+}
+
+.App .page-content .link-container .linkform-container form button {
+  height: 40px;
+  margin: 10px;
+  padding: 0px 20px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App .page-content .link-container .linkform-container form button:hover {
+  background-color: var(--hover-blue-color);
+}
+
+.App .page-content .link-container h1 {
+  color: var(--blue-color);
+  margin: 40px 0px 0px 0px;
+}
+
+.App .page-content .link-container h4 {
+  color: var(--vampire-black);
+  margin: 5px;
+  font-weight: normal;
+}
+
+.App .page-content .list-container {
+  height: 50%;
+}
+
+.App .page-content .linklist-container {
+  padding: 20px;
+  margin: 40px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.App .page-content .linklist-container .shorted-link-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.App .page-content .linklist-container .shorted-link-card i {
+  margin: 15px;
+  cursor: pointer;
+  font-size: var(--large-font);
+}
+
+.App .page-content .linklist-container .shorted-link-card p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px;
+}
+
+@media (max-width: 450px) {
+  .App .page-content .card-container .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .App .page-content .card-container .cards .card {
+    margin-top: 10px;
+    padding: 10px 25px;
+    width: 80%;
+  }
+
+  .App .page-content .form-container form {
+    width: 80%;
+    padding: 0px 20px;
+  }
+
+  .App .page-content .link-container .linkform-container form input {
+    width: 100%;
+  }
+}
